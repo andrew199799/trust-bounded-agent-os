@@ -20,6 +20,16 @@ Knowledge Governance -> Advisory Governance -> Action Governance
 
 The current implementation focus is **Action Spine**, while the broader framework also preserves provenance, challengeability, confirmation status, and recovery paths. The present repository remains a non-production, mock-only public demo.
 
+## Core Doctrine
+
+```text
+1. Human beings retain sovereignty over meaning.
+2. Human knowledge, experience, and preferences must retain provenance, boundaries, and confirmation status.
+3. AI may interpret, advise, and act only within authorized boundaries.
+4. Judgment-shaping advice must be source-grounded, challengeable, verifiable, and downgradeable.
+5. Side-effectful action must be decidable, traceable, and recoverable.
+```
+
 ## Why This Exists
 
 AI agents are becoming capable of acting across files, tools, APIs, workflows, and external systems. The core risk is not only model intelligence. It is also unsafe action boundaries, unclear authority, missing confirmation, weak auditability, and over-trusting autonomous behavior.
@@ -108,6 +118,19 @@ no real external side effects
 ```
 
 Any future work that could create side effects, access credentials, call live systems, write real files, or execute actions requires explicit human confirmation and a separate scoped review.
+
+## Final Test
+
+Every future addition must answer:
+
+```text
+Does it protect human meaning sovereignty?
+Does it preserve provenance, boundaries, and confirmation status?
+Does it make judgment-shaping advice reviewable and downgradeable?
+Does it make side-effectful action decidable, traceable, and recoverable?
+```
+
+If not, it should not enter the TBAO main line.
 
 ## License
 
