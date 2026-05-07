@@ -38,6 +38,15 @@ TBAO starts from a simple position: humans retain sovereignty over meaning, auth
 
 The project keeps its ambition clear: help AI systems mature toward bounded, reviewable, recoverable action. The current repository does not yet provide that as a production runtime.
 
+## Project Value
+
+- Gives developers a shared language for discussing agent action boundaries before implementation.
+- Separates public framework discussion from protected real implementation work in `Twin-Brain-Agent-OS`.
+- Shows how intent, proposed action, risk, confirmation, execution status, and audit notes can be inspected before action.
+- Helps researchers and builders discuss trust-bounded agent governance without pretending a runtime exists.
+- Creates a safe public entry point for contributors while protecting proprietary product work.
+- Keeps human meaning sovereignty and controlled agent power at the center.
+
 ## Core Idea
 
 The central concept is the **Action Spine**: a minimal structure that turns an agent's intent into an inspectable proposal before execution.
@@ -59,6 +68,10 @@ The current demo shows the shape of this structure. It does not execute actions,
 - Governance spine for knowledge, advice, and action boundaries.
 - Mock-only Action Spine MVP design.
 - Static mock proposal example with `execution_status: not_executed`.
+- v0.1 public manifesto and release note.
+- Public roadmap and discussion guide.
+- Non-executable reference skeleton.
+- Mermaid diagram sources.
 - Collaboration and scope-control baseline for narrow public PRs.
 
 ## What Is Not Included
@@ -92,6 +105,12 @@ No runtime implementation has started. No Action Spine execution has started.
 - [`docs/principles.zh-en.md`](docs/principles.zh-en.md): core principles behind TBAO.
 - [`docs/glossary.zh-en.md`](docs/glossary.zh-en.md): bilingual terminology reference.
 - [`docs/action-spine-mvp.zh-en.md`](docs/action-spine-mvp.zh-en.md): Action Spine MVP design and safety boundary.
+- [`docs/roadmap.md`](docs/roadmap.md): public-framework roadmap.
+- [`docs/discussion-guide.md`](docs/discussion-guide.md): contributor discussion guide.
+- [`docs/release-notes/v0.1-public-manifesto-static-demo.md`](docs/release-notes/v0.1-public-manifesto-static-demo.md): v0.1 public manifesto and static demo release note.
+- [`docs/action-spine-reference-skeleton.md`](docs/action-spine-reference-skeleton.md): non-executable Action Spine pseudo-interface skeleton.
+- [`docs/diagrams/action-spine-flow.mmd`](docs/diagrams/action-spine-flow.mmd): Mermaid source for the Action Spine flow.
+- [`docs/diagrams/public-protected-boundary.mmd`](docs/diagrams/public-protected-boundary.mmd): Mermaid source for the public/protected repository boundary.
 - [`docs/non-goals.zh-en.md`](docs/non-goals.zh-en.md): explicit non-goals and scope limits.
 - [`docs/development-log/action-spine-static-mock-example.md`](docs/development-log/action-spine-static-mock-example.md): static mock proposal example.
 - [`docs/development-log/phase-1-release-note.md`](docs/development-log/phase-1-release-note.md): Phase 1 collaboration baseline summary.
