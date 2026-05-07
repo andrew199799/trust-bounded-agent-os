@@ -29,7 +29,10 @@ This index helps public readers find the right document quickly. It is navigatio
 ## Demo / Mock-Only Docs
 
 - [`action-spine-mvp.zh-en.md`](action-spine-mvp.zh-en.md): mock-only Action Spine MVP design.
+- [`action-spine-reference-skeleton.md`](action-spine-reference-skeleton.md): non-executable pseudo-interface reference skeleton.
 - [`development-log/action-spine-static-mock-example.md`](development-log/action-spine-static-mock-example.md): static mock proposal example.
+- [`diagrams/action-spine-flow.mmd`](diagrams/action-spine-flow.mmd): Mermaid source for the Action Spine flow.
+- [`diagrams/public-protected-boundary.mmd`](diagrams/public-protected-boundary.mmd): Mermaid source for the public/protected repository boundary.
 
 ## Development-Log Docs
 

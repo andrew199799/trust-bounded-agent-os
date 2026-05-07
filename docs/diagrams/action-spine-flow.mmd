@@ -1,0 +1,17 @@
+flowchart LR
+  intent["intent"]
+  proposed_action["proposed_action"]
+  risk_tier["risk_tier"]
+  required_confirmation["required_confirmation"]
+  execution_status["execution_status"]
+  audit_note["audit_note"]
+
+  intent --> proposed_action
+  proposed_action --> risk_tier
+  risk_tier --> required_confirmation
+  required_confirmation --> execution_status
+  execution_status --> audit_note
+
+  boundary["documentation only\nmock-only\nnon-executing"]
+  boundary -.-> intent
+  boundary -.-> execution_status

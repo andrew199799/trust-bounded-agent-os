@@ -1,0 +1,10 @@
+flowchart LR
+  public_repo["Trust-Bounded-Agent-OS\npublic manifesto\nframework spec\nmock-only static demo"]
+  extraction["abstracted\nnon-executing\nnon-proprietary\nnon-sensitive extraction only"]
+  protected_base["MagicWorld2100/Twin-Brain-Agent-OS\nprotected real implementation base"]
+
+  protected_base --> extraction
+  extraction --> public_repo
+
+  public_repo -. "no runtime\nno validator\nno execution" .-> public_boundary["public discussion boundary"]
+  protected_base -. "real implementation belongs here first" .-> protected_boundary["protected implementation boundary"]
