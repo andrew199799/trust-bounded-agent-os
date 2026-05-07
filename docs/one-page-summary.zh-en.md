@@ -1,160 +1,120 @@
-# TBAO — One-Page Summary / 一页版摘要
+# Trust-Bounded Agent OS (TBAO)
 
-> Status / 状态: v0.1 public draft / v0.1 公开草稿  
-> Purpose / 用途: External-facing positioning and design anchor / 对外定位与设计锚点
+## One-Sentence Summary / 一句话摘要
 
----
+**English**: TBAO is a public framework and mock-only demo for making AI agent actions inspectable, bounded, confirmable, and auditable before execution.
 
-## 1. What is TBAO? / TBAO 是什么？
+**中文**：TBAO 是一个公开框架和仅模拟演示，用于让 AI Agent 的行动在执行前可检查、有边界、可确认、可审计。
 
-### English
+## Why It Matters / 为什么重要
 
-**Trust-Bounded Agent OS (TBAO)** is a cross-runtime governance spine for human-bounded AI agents.
+**English**: AI is moving from conversation to action across tools, files, APIs, workflows, and external systems. The critical risk is not only wrong answers, but uncontrolled agent power, unclear authority, missing confirmation, weak auditability, and unrecoverable side effects.
 
-It is not another agent platform, not a dual-model wrapper, and not a claim that AI can be given real conscience. TBAO asks how personal and organizational AI systems can preserve human meaning sovereignty, knowledge provenance, judgment boundaries, action accountability, and responsibility trails when agents begin to remember, plan, use tools, and act over time.
+**中文**：AI 正在从对话走向跨工具、文件、API、工作流和外部系统的行动。关键风险不只是错误答案，还包括失控的 Agent 权力、模糊授权、缺失确认、弱审计能力和不可恢复的副作用。
 
-TBAO does not solve all AI risks. It focuses on how AI uses human knowledge, shapes human judgment, and performs side-effectful actions.
+## Core Position / 核心立场
 
-### 中文
+**English**: TBAO protects human meaning sovereignty. It does not restrict the growth of intelligence; it restricts uncontrolled agent power. Agents may interpret and propose, but side-effectful action must be bounded and reviewable.
 
-**Trust-Bounded Agent OS（TBAO）** 是一条面向人类边界约束型 AI Agent 的跨 Runtime 治理脊柱。
+**中文**：TBAO 保护人的意义主权。它不限制智能的生长，只限制失控的 Agent 权力。Agent 可以解释和建议，但有外部副作用的行动必须有边界、可审查。
 
-它不是另一个 Agent 平台，不是双模型包装器，也不声称给 AI 安装真实良知。TBAO 关注的是：当个人和组织的 AI 系统开始记忆、规划、调用工具并持续行动时，如何保留人的意义主权、知识来源、判断边界、行动责任和责任线索。
+## Core Doctrine / 核心总纲
 
-TBAO 不解决所有 AI 风险；它聚焦 AI 如何使用人的知识、影响人的判断、执行有外部副作用的行动。
-
----
-
-## 2. Core Doctrine / 核心总纲
-
-### English
+**English**
 
 ```text
 1. Human beings retain sovereignty over meaning.
 2. Human knowledge, experience, and preferences must retain provenance, boundaries, and confirmation status.
 3. AI may interpret, advise, and act only within authorized boundaries.
-4. Every judgment-shaping advisory output must be source-grounded, challengeable, verifiable, and downgradeable.
-5. Every side-effectful action must be decidable, traceable, and recoverable.
+4. Judgment-shaping advice must be source-grounded, challengeable, verifiable, and downgradeable.
+5. Side-effectful action must be decidable, traceable, and recoverable.
 ```
 
-Core chain:
-
-```text
-Knowledge Governance -> Advisory Governance -> Action Governance
-```
-
-TBAO does not restrict intelligence. It restricts uncontrolled power.
-
-### 中文
+**中文**
 
 ```text
 1. 人拥有意义主权。
-2. 人的知识、经验和偏好必须保持来源、边界和确认状态。
-3. AI 只能在授权边界内解释、建议与行动。
-4. 所有会显著影响人类判断的建议，必须可溯源、可质疑、可校验、可降级。
-5. 所有有外部副作用的行动，必须可裁决、可追溯、可恢复。
+2. 人的知识、经验和偏好必须保留来源、边界和确认状态。
+3. AI 只能在授权边界内解释、建议和行动。
+4. 影响判断的建议必须可溯源、可质疑、可校验、可降级。
+5. 有外部副作用的行动必须可裁决、可追踪、可恢复。
 ```
 
-核心链路：
+## Action Spine / 行动脊柱
 
 ```text
-知识治理 -> 顾问治理 -> 行动治理
+intent
+  -> proposed_action
+  -> risk_tier
+  -> required_confirmation
+  -> execution_status
+  -> audit_note
 ```
 
-TBAO 不限制智能的生长，只限制权力的失控。
+**English**: Current v0.1 only demonstrates this structure as mock-only documentation. It does not execute actions or operate as a production runtime.
 
----
+**中文**：当前 v0.1 只以仅模拟文档展示这个结构，不执行行动，也不是生产运行时。
 
-## 3. Why Now? / 为什么现在重要？
+## Governance Surfaces / 治理界面
 
-### English
+**English**: TBAO uses three connected surfaces: **Knowledge Governance**, **Advisory Governance**, and **Action Governance**.
 
-AI is moving from content generation into action: using tools, reading and writing files, calling APIs, connecting to services, writing durable memory, and operating with less direct human intervention.
+**中文**：TBAO 使用三个相互连接的治理界面：**知识治理**、**顾问治理**、**行动治理**。
 
-The risk expands from “the answer was wrong” into:
+## Current Status / 当前状态
 
-- misunderstanding the human’s real goal;
-- writing inference into durable memory;
-- crossing authority boundaries under task-completion pressure;
-- leaving irreversible or hard-to-review side effects;
-- creating incidents with no evidence chain for review or recovery.
+**English**: v0.1 is a public draft. It includes a conceptual framework, governance spine, and mock-only Action Spine demo. It is not production-ready and includes no runtime execution, no live API, no scheduler, no worker, no real credentials, no real file writes, no real funds, and no external side effects.
 
-Behavior risk cannot be solved by prompts alone. It needs architectural governance.
+**中文**：v0.1 是公开草稿，包含概念框架、治理脊柱和仅模拟的 Action Spine 演示。它尚非生产可用，不包含运行时执行、实时 API、调度器、worker、真实密钥、真实文件写入、真实资金或外部副作用。
 
-### 中文
+## Who This Is For / 适合谁
 
-AI 正在从内容生成系统变成行动系统：调用工具、读写文件、请求 API、连接服务、写入长期记忆，并在较少人工干预下持续运行。
+**English**: AI agent builders, governance researchers, open-source tool designers, organizations exploring safe agent adoption, and individuals building personal AI workspaces.
 
-风险因此从“回答错了”扩展为：
+**中文**：适合 AI Agent 构建者、治理研究者、开源工具设计者、探索安全 Agent 采用的组织，以及构建个人 AI 工作空间的个人。
 
-- 误解人的真实目标；
-- 把推断写入长期记忆；
-- 在完成率压力下越过授权边界；
-- 在外部系统中留下不可逆或难以复盘的副作用；
-- 事故发生后没有证据链可复盘和恢复。
+## What This Is Not / TBAO 不是什么
 
-行为风险不能只靠提示词解决，必须进入架构治理。
+**English**: TBAO is not a production runtime, not a general agent framework, not a content moderation system, not a claim that AI has conscience, and not a substitute for human responsibility, law, or institutional governance.
 
----
+**中文**：TBAO 不是生产运行时，不是通用 Agent 框架，不是内容审核系统，不声称 AI 拥有良知，也不替代人的责任、法律或组织治理。
 
-## 4. First Implementable Cut / 第一版可实施切口
+## Current Roadmap / 当前路线图
 
-### English
+**English**
 
-TBAO v0.1 begins with the **Action Spine MVP**:
+- Phase 1: completed collaboration baseline and static mock.
+- Phase 2: public narrative and README framing.
+- Phase 3: Action Spine static demo.
+- Phase 4: public release packaging.
+
+**中文**
+
+- Phase 1：已完成协作基线和静态模拟。
+- Phase 2：公共叙事和 README framing。
+- Phase 3：Action Spine 静态演示。
+- Phase 4：公开发布打包。
+
+## Final Test / 最终测试
+
+**English**
 
 ```text
-ActionRequest -> RiskClassifier -> PolicyDecision -> ExecutionGuard -> ActionLedger
+Does it protect human meaning sovereignty?
+Does it preserve provenance, boundaries, and confirmation status?
+Does it make judgment-shaping advice reviewable and downgradeable?
+Does it make side-effectful action decidable, traceable, and recoverable?
 ```
 
-The first version proves one thing: side-effectful agent actions can be structured, classified, decided, guarded, and recorded before execution.
-
-### 中文
-
-TBAO v0.1 从 **Action Spine MVP / 行动脊柱 MVP** 开始：
+**中文**
 
 ```text
-行动请求 -> 风险分级 -> 策略裁决 -> 执行守卫 -> 行动账本
+它是否保护人的意义主权？
+它是否保留来源、边界和确认状态？
+它是否让影响判断的建议可审查、可降级？
+它是否让有外部副作用的行动可裁决、可追踪、可恢复？
 ```
 
-第一版只证明一件事：Agent 的有外部副作用行动，可以在执行前被结构化、分级、裁决、守卫和留痕。
+**English**: Better agents do not only need more capability. They need trustworthy boundaries.
 
----
-
-## 5. What TBAO Is Not / TBAO 不是什么
-
-### English
-
-TBAO is not:
-
-- another chatbot;
-- another general-purpose agent framework;
-- a dual-model wrapper;
-- a content moderation system;
-- a generic permission platform;
-- a substitute for law, organizational responsibility, or human final judgment;
-- a production-readiness claim.
-
-### 中文
-
-TBAO 不是：
-
-- 另一个聊天机器人；
-- 另一个通用 Agent 框架；
-- 双模型包装器；
-- 内容审核系统；
-- 通用权限平台；
-- 法律、组织责任或人类最终判断的替代品；
-- 生产可用承诺。
-
----
-
-## 6. One-Sentence Positioning / 一句话定位
-
-### English
-
-**TBAO protects human meaning sovereignty and helps AI mature through bounded action.**
-
-### 中文
-
-**TBAO 保护人的意义主权，让 AI 在受控行动中成熟。**
+**中文**：更好的 Agent 不只需要更强能力，也需要可信边界。
