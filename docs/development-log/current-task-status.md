@@ -2,11 +2,13 @@
 
 ## Current Phase
 
-Phase 1 closure.
+Phase 2 - Public Narrative & README Framing.
 
 ## Current PR Objective
 
-PR #4 creates a short release/evidence note only.
+PR #5 rewrites README for public positioning.
+
+Tracking issue: #7.
 
 This PR is documentation-only. No runtime implementation has started, and no Action Spine execution has started.
 
@@ -15,21 +17,22 @@ This PR is documentation-only. No runtime implementation has started, and no Act
 - PR #1 collaboration baseline is merged.
 - PR #2 mock-only Action Spine MVP slice is merged.
 - PR #3 static mock Action Spine proposal example is merged.
+- PR #4 Phase 1 release note is merged.
 - Stage: `v0.1 public draft`.
 - Existing boundary: conceptual framework, governance spine, and mock-only MVP design.
 - Safety posture: local-only, mock-only, non-executing, no real credentials, no real funds, no real external side effects.
-- Current phase PR budget status: PR #4 of maximum 4 PRs.
-- PR #4 should change only:
-  - `docs/development-log/phase-1-release-note.md`
+- PR budget status: PR #5 of the v0.1 public demo sequence.
+- PR #5 should change only:
+  - `README.md`
   - `docs/development-log/current-task-status.md`
 
 ## Open Decisions
 
-- Whether Phase 2 stays docs-only or introduces a static non-executing fixture.
-- What human review checkpoint is required before Phase 2 starts.
+- Whether PR #6 should add a one-page public brief or refine an existing one.
+- Whether Phase 3 remains static documentation or introduces a static non-executing fixture.
 
-## Next Recommended Step After PR #4
+## Next Recommended Step After PR #5
 
-Pause for human review and decide Phase 2 direction.
+Add a one-page public brief or framework overview.
 
-Do not add runtime execution, Action Spine execution, executable scripts, tests, package files, live APIs, credentials, scheduler, worker, real file writes, live integrations, production plugin activation, external side effects, production-readiness claims, or any new mock scenario beyond summarizing existing PR #3.
+Do not add runtime execution, Action Spine execution, executable scripts, tests, package files, live APIs, credentials, scheduler, worker, real file writes, live integrations, production plugin activation, external side effects, or production-readiness claims.
