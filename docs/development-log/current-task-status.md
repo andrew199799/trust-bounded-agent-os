@@ -6,7 +6,7 @@ Phase 3 - Action Spine Static Demo.
 
 ## Current PR Objective
 
-Phase 3 checkpoint 1 - static non-executing proposal fixture.
+Phase 3 checkpoint 2 - reviewer walkthrough.
 
 Tracking issue: #8.
 
@@ -22,22 +22,23 @@ This PR is documentation-only. No runtime implementation has started, and no Act
 - GitHub PR #11 one-page public summary is merged.
 - Phase 2 is complete.
 - GitHub PR #12 framework overview and docs index is merged.
+- GitHub PR #13 static fixture is merged.
 - Stage: `v0.1 public draft`.
 - Existing boundary: conceptual framework, governance spine, and mock-only MVP design.
 - Safety posture: local-only, mock-only, non-executing, no real credentials, no real funds, no real external side effects.
 - Current checkpoint should change only:
-  - `docs/action-spine-fixtures/mock-file-write.proposal.yaml`
+  - `docs/action-spine-fixtures/reviewer-walkthrough.md`
   - `docs/action-spine-fixtures/README.md`
   - `docs/development-log/current-task-status.md`
 
 ## Open Decisions
 
-- What the reviewer walkthrough should emphasize.
 - Whether later static fixtures are needed after the mock file write proposal.
 - How much risk-tier semantics should be explained before any executable tooling exists.
+- How much reviewer guidance should move into the public docs index later.
 
 ## Next Recommended Step After This Checkpoint
 
-Reviewer walkthrough.
+Risk-tier and confirmation-token semantics.
 
 Do not add runtime execution, Action Spine execution, executable scripts, tests, package files, live APIs, credentials, scheduler, worker, real file writes, live integrations, production plugin activation, external side effects, or production-readiness claims.

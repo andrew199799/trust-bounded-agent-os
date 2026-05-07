@@ -16,6 +16,8 @@ This directory contains static, non-executing Action Spine proposal fixtures for
 - audit note;
 - explicit safety boundary.
 
+For field-by-field review guidance, see [`reviewer-walkthrough.md`](reviewer-walkthrough.md).
+
 ## Field Guide
 
 - `intent`: the mock user intent and its confirmation status.
