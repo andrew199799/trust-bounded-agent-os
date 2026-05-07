@@ -2,6 +2,8 @@
 
 Trust-Bounded Agent OS is a public framework and mock-only demo for making AI agent actions inspectable, bounded, confirmable, and auditable before execution.
 
+TBAO does not restrict the growth of intelligence. It restricts uncontrolled agent power.
+
 **Status:** `v0.1 public draft`  
 **Current scope:** conceptual framework, governance spine, and mock-only Action Spine demo  
 **Production readiness:** not production-ready
@@ -63,6 +65,10 @@ No runtime implementation has started. No Action Spine execution has started.
 
 ## Repository Map
 
+- [`docs/one-page-summary.zh-en.md`](docs/one-page-summary.zh-en.md): concise bilingual public summary.
+- [`docs/position-paper.zh-en.md`](docs/position-paper.zh-en.md): v0.1 position paper and design stance.
+- [`docs/principles.zh-en.md`](docs/principles.zh-en.md): core principles behind TBAO.
+- [`docs/glossary.zh-en.md`](docs/glossary.zh-en.md): bilingual terminology reference.
 - [`docs/action-spine-mvp.zh-en.md`](docs/action-spine-mvp.zh-en.md): Action Spine MVP design and safety boundary.
 - [`docs/non-goals.zh-en.md`](docs/non-goals.zh-en.md): explicit non-goals and scope limits.
 - [`docs/development-log/action-spine-static-mock-example.md`](docs/development-log/action-spine-static-mock-example.md): static mock proposal example.
