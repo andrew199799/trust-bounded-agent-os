@@ -8,6 +8,18 @@ TBAO does not restrict the growth of intelligence. It restricts uncontrolled age
 **Current scope:** conceptual framework, governance spine, and mock-only Action Spine demo  
 **Production readiness:** not production-ready
 
+## Public Identity
+
+TBAO protects **human meaning sovereignty** by separating what an agent can infer from what a human has authorized.
+
+Its governance model has three connected surfaces:
+
+```text
+Knowledge Governance -> Advisory Governance -> Action Governance
+```
+
+The current implementation focus is **Action Spine**, while the broader framework also preserves provenance, challengeability, confirmation status, and recovery paths. The present repository remains a non-production, mock-only public demo.
+
 ## Why This Exists
 
 AI agents are becoming capable of acting across files, tools, APIs, workflows, and external systems. The core risk is not only model intelligence. It is also unsafe action boundaries, unclear authority, missing confirmation, weak auditability, and over-trusting autonomous behavior.
