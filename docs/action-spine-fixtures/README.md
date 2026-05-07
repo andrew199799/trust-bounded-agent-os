@@ -18,6 +18,8 @@ This directory contains static, non-executing Action Spine proposal fixtures for
 
 For field-by-field review guidance, see [`reviewer-walkthrough.md`](reviewer-walkthrough.md).
 
+For the public semantics of risk, confirmation, and audit fields, see [`risk-confirmation-audit-semantics.md`](risk-confirmation-audit-semantics.md).
+
 ## Field Guide
 
 - `intent`: the mock user intent and its confirmation status.
