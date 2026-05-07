@@ -16,6 +16,9 @@ This index helps public readers find the right document quickly. It is navigatio
 
 - [`one-page-summary.zh-en.md`](one-page-summary.zh-en.md): concise bilingual public brief.
 - [`position-paper.zh-en.md`](position-paper.zh-en.md): v0.1 public stance and rationale.
+- [`roadmap.md`](roadmap.md): public-framework roadmap.
+- [`discussion-guide.md`](discussion-guide.md): public contributor discussion guide.
+- [`release-notes/v0.1-public-manifesto-static-demo.md`](release-notes/v0.1-public-manifesto-static-demo.md): v0.1 public manifesto and static demo release notes.
 
 ## Framework docs
 
