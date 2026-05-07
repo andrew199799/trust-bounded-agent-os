@@ -1,0 +1,45 @@
+id: mock-file-write-001
+fixture_type: static_non_executing_action_spine_proposal
+status: not_executed
+
+intent:
+  summary: "Draft a local mock review note for a static Action Spine checkpoint."
+  source: "illustrative_fixture_only"
+  confidence: "mock_confidence_high_for_demo"
+  confirmation_status: "unconfirmed_mock_intent"
+
+proposed_action:
+  action_type: mock_file_write
+  target: "mock:/workspace/review-checkpoint.md"
+  description: "Illustrative proposed mock file write only; no file is created, modified, deleted, or written."
+  side_effect_type: controlled_mock_side_effect
+  execution_mode: static_fixture_only
+
+risk:
+  tier: L2_controlled_mock_side_effect
+  rationale: "A file-write-like proposal is treated conservatively even though this fixture cannot execute."
+  boundary: "local-only, mock-only, non-executing; no real filesystem mutation"
+
+required_confirmation:
+  required: true
+  token: CONFIRM_MOCK_FILE_WRITE_ONLY
+  reason: "The proposal describes a write-like action and should be human-confirmed before any future real implementation."
+  token_effect: "illustrative_only; does not unlock real behavior"
+
+execution_status:
+  state: not_executed
+  executed: false
+  blocked_reason: "static fixture only; no runtime consumes this file"
+
+audit_note:
+  summary: "The action was proposed only for static review and was not executed."
+  review_focus: "Check intent, proposed action, risk tier, confirmation token, non-execution status, and audit trail."
+  recovery_note: "No recovery is needed because no real file was created, modified, deleted, or written."
+
+safety_boundary:
+  local_only: true
+  mock_only: true
+  non_executing: true
+  no_real_credentials: true
+  no_real_funds: true
+  no_external_side_effects: true
