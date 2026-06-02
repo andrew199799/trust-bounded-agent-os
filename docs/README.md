@@ -39,6 +39,10 @@ This index helps public readers find the right document quickly. It is navigatio
 - [`development-log/current-task-status.md`](development-log/current-task-status.md): current public work status.
 - [`development-log/phase-1-release-note.md`](development-log/phase-1-release-note.md): Phase 1 closure note.
 
+## Discussion & Architecture Extensions
+
+- [`discussion/agent-maturity-governance.zh-en.md`](discussion/agent-maturity-governance.zh-en.md): agent maturity model and governance feedback loop (v0.1 discussion draft).
+
 ## Non-Goals And Boundaries
 
 - [`non-goals.zh-en.md`](non-goals.zh-en.md): explicit non-goals and safety boundaries.
