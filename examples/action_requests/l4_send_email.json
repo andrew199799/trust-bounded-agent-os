@@ -1,0 +1,15 @@
+{
+  "action_id": "act_l4_send_email",
+  "agent_id": "agent.local.mock",
+  "requested_by": "human.andrew",
+  "action_type": "email.send",
+  "target": "mock:mailto:reviewer@example.invalid",
+  "intent": "Send an external message to a third party.",
+  "evidence": ["External message sending can affect a third party."],
+  "environment": "local_mock",
+  "reversibility": "irreversible",
+  "side_effect_scope": "external_write",
+  "blast_radius": "third_party",
+  "sensitive_surface": "none",
+  "timestamp": "2026-06-03T00:00:00Z"
+}

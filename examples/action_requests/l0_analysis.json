@@ -1,0 +1,15 @@
+{
+  "action_id": "act_l0_analysis",
+  "agent_id": "agent.local.mock",
+  "requested_by": "human.andrew",
+  "action_type": "analysis.draft",
+  "target": "mock:/thought/action-policy-notes",
+  "intent": "Analyze an action request without touching files or external systems.",
+  "evidence": ["Human asked for local policy reasoning only."],
+  "environment": "local_mock",
+  "reversibility": "none",
+  "side_effect_scope": "thought_only",
+  "blast_radius": "self",
+  "sensitive_surface": "none",
+  "timestamp": "2026-06-03T00:00:00Z"
+}
