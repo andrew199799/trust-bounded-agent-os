@@ -3,6 +3,8 @@
 > Status / 状态: v0.1 public draft / v0.1 公开草稿  
 > Boundary / 边界: local-only, mock-only, non-executing / 仅本地、仅模拟、不真实执行
 
+> Implementation note / 实现说明: Action Spine MVP now has a local mock Action Policy Kernel v0.1 under `src/tbao/`. It remains local-only, mock-only, and non-executing. / Action Spine MVP 现在在 `src/tbao/` 下已有本地模拟 Action Policy Kernel v0.1。它仍然仅本地、仅模拟、不真实执行。
+
 ---
 
 ## 1. Purpose / 目的
@@ -15,7 +17,9 @@ It proves one thing:
 
 > An AI agent should not jump directly from intent to side-effectful execution.
 
-Before execution, the agent must produce a structured action request, receive a risk tier, pass policy decision, satisfy execution guard controls, and leave an action ledger record.
+Before execution, the agent must produce a structured action request, receive a risk tier, pass policy decision, satisfy approval controls where required, and leave an action ledger record.
+
+The current v0.1 kernel focuses on risk classification, policy decision, approval ticket validation, and ledger append. It does not provide real execution.
 
 ### 中文
 
@@ -25,7 +29,9 @@ Action Spine MVP 是 TBAO 的第一版可实施切口。
 
 > AI Agent 不应从意图直接跳到有外部副作用的执行。
 
-在执行前，Agent 必须先产生结构化行动请求，获得风险分级，通过策略裁决，满足执行守卫控制，并留下行动账本记录。
+在执行前，Agent 必须先产生结构化行动请求，获得风险分级，通过策略裁决，在需要时满足审批控制，并留下行动账本记录。
+
+当前 v0.1 内核聚焦风险分级、策略裁决、审批凭证校验和账本追加。它不提供真实执行。
 
 ---
 
@@ -36,7 +42,7 @@ Intent
   -> ActionRequest
   -> RiskClassifier
   -> PolicyDecision
-  -> ExecutionGuard
+  -> ApprovalTicket
   -> ActionLedger
 ```
 
@@ -47,9 +53,13 @@ Intent
   -> 行动请求
   -> 风险分级
   -> 策略裁决
-  -> 执行守卫
+  -> 审批凭证
   -> 行动账本
 ```
+
+ExecutionGuard remains a broader or future Action Spine concept. The current v0.1 kernel does not implement an execution guard or any execution-capable runtime.
+
+执行守卫仍是更广义或未来 Action Spine 概念。当前 v0.1 内核不实现执行守卫，也不实现任何可执行运行时。
 
 ---
 

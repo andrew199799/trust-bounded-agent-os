@@ -2,9 +2,9 @@
 
 ## Current v0.1 Status
 
-TBAO v0.1 is a public manifesto, framework spec, and mock-only static demo. It is not the full TBAO product, not production-ready, and not an execution runtime.
+TBAO v0.1 is a public manifesto, framework spec, mock-only static demo, and local-only mock Action Policy Kernel v0.1. It is not the full TBAO product, not production-ready, and not an execution runtime.
 
-The current public demo explains the Action Spine shape for inspectable agent action proposals:
+The current public material explains the Action Spine shape for inspectable agent action proposals:
 
 ```text
 intent
@@ -15,12 +15,15 @@ intent
   -> audit_note
 ```
 
+The local mock Action Policy Kernel makes risk classification, approval gating, and ledger recording testable without enabling real execution.
+
 ## What Is Intentionally Public
 
 - Core manifesto language around human meaning sovereignty.
 - Framework concepts for knowledge, advisory, and action governance.
 - Mock-only Action Spine documentation.
 - Static fixture semantics for risk tier, confirmation token, audit note, and mandatory non-execution.
+- Local-only mock Action Policy Kernel v0.1 semantics for risk classification, approval tickets, and ledger records.
 - Contributor discussion material for serious framework critique.
 
 ## What Remains Protected / Outside This Repo
@@ -33,10 +36,11 @@ intent
 ## Near-Term Public Roadmap
 
 - Tighten public terminology and bilingual framing.
-- Improve static Action Spine examples without adding execution.
-- Refine risk-tier, confirmation, and audit semantics as framework language.
-- Clarify what public contributors can safely discuss.
+- Refine static and local mock Action Spine examples without adding execution.
+- Tighten risk-tier, approval-ticket, and ledger semantics through critique.
+- Invite contributor discussion around authority boundaries and review language.
 - Keep documentation navigation concise and reviewable.
+- Avoid runtime expansion.
 
 ## Possible Future Extraction From Twin-Brain-Agent-OS
 
@@ -52,9 +56,13 @@ Possible candidates include:
 
 ## Non-Goals
 
-- No runtime implementation.
-- No validator, script, test, API, scheduler, or worker.
-- No credentials, live integrations, real file writes, real funds, or external side effects.
-- No Action Spine execution.
+- No production runtime.
+- No live API.
+- No scheduler.
+- No worker.
+- No credentials.
+- No real file writes or deletion.
+- No real funds, payments, or trades.
+- No external side effects.
 - No productization language or production-readiness framing.
 - No expansion into scenario-specific product work unless explicitly scoped later.
