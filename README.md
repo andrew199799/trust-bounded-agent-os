@@ -1,11 +1,11 @@
 # Trust-Bounded Agent OS (TBAO)
 
-Trust-Bounded Agent OS is a public framework and mock-only demo for making AI agent actions inspectable, bounded, confirmable, and auditable before execution.
+Trust-Bounded Agent OS is a public framework and local mock prototype for making AI agent actions inspectable, bounded, confirmable, and auditable before execution.
 
 TBAO does not restrict the growth of intelligence. It restricts uncontrolled agent power.
 
-**Status:** `v0.1 public draft`  
-**Current scope:** conceptual framework, governance spine, and mock-only Action Spine demo  
+**Status:** `v0.1 public draft with local mock Action Policy Kernel`  
+**Current scope:** conceptual framework, governance spine, mock-only Action Spine design, and local-only Action Policy Kernel prototype  
 **Production readiness:** not production-ready
 
 ## Public Identity
@@ -18,7 +18,7 @@ Its governance model has three connected surfaces:
 Knowledge Governance -> Advisory Governance -> Action Governance
 ```
 
-The current implementation focus is **Action Spine**, while the broader framework also preserves provenance, challengeability, confirmation status, and recovery paths. The present repository remains a non-production, mock-only public demo.
+The current implementation focus is **Action Spine** and its first local mock enforcement slice, **Action Policy Kernel v0.1**. The broader framework also preserves provenance, challengeability, confirmation status, and recovery paths. The present repository remains non-production, local-only, mock-only, and non-executing.
 
 ## Core Doctrine
 
@@ -36,13 +36,14 @@ AI agents are becoming capable of acting across files, tools, APIs, workflows, a
 
 TBAO starts from a simple position: humans retain sovereignty over meaning, authority, and responsibility. Agents may interpret, propose, and assist, but side-effectful action should be structured for review before anything real happens.
 
-The project keeps its ambition clear: help AI systems mature toward bounded, reviewable, recoverable action. The current repository does not yet provide that as a production runtime.
+The project keeps its ambition clear: help AI systems mature toward bounded, reviewable, recoverable action. The current repository does not provide that as a production runtime.
 
 ## Project Value
 
 - Gives developers a shared language for discussing agent action boundaries before implementation.
 - Separates public framework discussion from protected real implementation work in `Twin-Brain-Agent-OS`.
 - Shows how intent, proposed action, risk, confirmation, execution status, and audit notes can be inspected before action.
+- Adds a local mock policy kernel that makes risk classification, approval gating, and ledger recording testable without enabling real-world execution.
 - Helps researchers and builders discuss trust-bounded agent governance without pretending a runtime exists.
 - Creates a safe public entry point for contributors while protecting proprietary product work.
 - Keeps human meaning sovereignty and controlled agent power at the center.
@@ -52,23 +53,26 @@ The project keeps its ambition clear: help AI systems mature toward bounded, rev
 The central concept is the **Action Spine**: a minimal structure that turns an agent's intent into an inspectable proposal before execution.
 
 ```text
-intent
-  -> proposed_action
-  -> risk_tier
-  -> required_confirmation
-  -> execution_status
-  -> audit_note
+ActionRequest
+  -> RiskClassifier
+  -> PolicyDecision
+  -> ApprovalTicket
+  -> ActionLedger
 ```
 
-The current demo shows the shape of this structure. It does not execute actions, call services, schedule work, or operate as a production runtime.
+The current local mock kernel demonstrates this path as policy code. It does not execute actions, call services, schedule work, operate as a production runtime, or create real external side effects.
 
 ## What Is Included Now
 
 - Conceptual framework for trust-bounded agent governance.
 - Governance spine for knowledge, advice, and action boundaries.
 - Mock-only Action Spine MVP design.
+- Local mock Action Policy Kernel v0.1 under `src/tbao/`.
+- L0-L4 action request examples under `examples/action_requests/`.
+- Pytest coverage for risk classification, approval ticket validation, policy decisions, and ledger append behavior.
+- Human-readable risk rules mirror under `configs/risk_rules.v0.1.yaml`.
 - Static mock proposal example with `execution_status: not_executed`.
-- v0.1 public manifesto and release note.
+- v0.1 public manifesto, static demo release note, and Action Policy Kernel release note.
 - Public roadmap and discussion guide.
 - Non-executable reference skeleton.
 - Mermaid diagram sources.
@@ -83,20 +87,21 @@ TBAO v0.1 is not production-ready and does not include:
 - scheduler;
 - worker;
 - credentials;
-- real file writes;
-- real funds;
-- external side effects;
+- real file writes or deletion;
+- real funds, payments, or trades;
+- real email or external message sending;
+- production environment mutation;
 - trading, health, legal, or personal-data runtime scenarios.
 
 It is also not a general agent framework, a content moderation system, a generic permission platform, or a claim that AI can be given real conscience.
 
 ## Current Demo Status
 
-v0.1 is in public draft / mock-only demo stage.
+v0.1 is in public draft / local mock prototype stage.
 
-The current demo material is static documentation. It demonstrates how a proposed action can be represented for human review, including intent, proposed action, risk tier, confirmation token, non-execution status, and audit note.
+The current repository includes both static Action Spine documentation and a local-only, mock-only Action Policy Kernel. The kernel demonstrates how a proposed action can be represented, classified, gated by approval semantics, and recorded in an in-memory ledger without enabling real execution.
 
-No runtime implementation has started. No Action Spine execution has started.
+No production runtime exists. No live API integration, scheduler, worker, credential path, or external side-effect path exists.
 
 ## Repository Map
 
@@ -105,10 +110,16 @@ No runtime implementation has started. No Action Spine execution has started.
 - [`docs/principles.zh-en.md`](docs/principles.zh-en.md): core principles behind TBAO.
 - [`docs/glossary.zh-en.md`](docs/glossary.zh-en.md): bilingual terminology reference.
 - [`docs/action-spine-mvp.zh-en.md`](docs/action-spine-mvp.zh-en.md): Action Spine MVP design and safety boundary.
+- [`docs/action-policy-kernel-v0.1.md`](docs/action-policy-kernel-v0.1.md): local mock Action Policy Kernel explanation.
 - [`docs/roadmap.md`](docs/roadmap.md): public-framework roadmap.
 - [`docs/discussion-guide.md`](docs/discussion-guide.md): contributor discussion guide.
 - [`docs/release-notes/v0.1-public-manifesto-static-demo.md`](docs/release-notes/v0.1-public-manifesto-static-demo.md): v0.1 public manifesto and static demo release note.
+- [`docs/release-notes/v0.1-action-policy-kernel.md`](docs/release-notes/v0.1-action-policy-kernel.md): local mock Action Policy Kernel release note.
 - [`docs/action-spine-reference-skeleton.md`](docs/action-spine-reference-skeleton.md): non-executable Action Spine pseudo-interface skeleton.
+- [`configs/risk_rules.v0.1.yaml`](configs/risk_rules.v0.1.yaml): human-readable risk rule mirror.
+- [`examples/action_requests/`](examples/action_requests/): L0-L4 mock action request examples.
+- [`src/tbao/`](src/tbao/): local-only, mock-only Action Policy Kernel primitives.
+- [`tests/`](tests/): pytest coverage for the local mock kernel.
 - [`docs/diagrams/action-spine-flow.mmd`](docs/diagrams/action-spine-flow.mmd): Mermaid source for the Action Spine flow.
 - [`docs/diagrams/public-protected-boundary.mmd`](docs/diagrams/public-protected-boundary.mmd): Mermaid source for the public/protected repository boundary.
 - [`docs/non-goals.zh-en.md`](docs/non-goals.zh-en.md): explicit non-goals and scope limits.
@@ -121,7 +132,8 @@ No runtime implementation has started. No Action Spine execution has started.
 - **Phase 1:** completed collaboration baseline and static mock.
 - **Phase 2:** public narrative and README framing.
 - **Phase 3:** Action Spine static demo.
-- **Phase 4:** public release packaging.
+- **Phase 4:** local mock Action Policy Kernel v0.1.
+- **Next:** documentation tightening, example refinement, and public-safe critique of risk/approval semantics.
 
 ## Safety Boundary
 
