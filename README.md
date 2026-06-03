@@ -29,6 +29,7 @@ The current implementation focus is **Action Spine** and its first local mock en
 4. Judgment-shaping advice must be source-grounded, challengeable, verifiable, and downgradeable.
 5. Side-effectful action must be decidable, traceable, and recoverable.
 ```
+<img width="1196" height="1315" alt="image" src="https://github.com/user-attachments/assets/6e5d4a49-04cf-4e9a-8d9c-281437156c4e" />
 
 ## Why This Exists
 
