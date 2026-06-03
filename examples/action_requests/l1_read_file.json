@@ -1,0 +1,15 @@
+{
+  "action_id": "act_l1_read_file",
+  "agent_id": "agent.local.mock",
+  "requested_by": "human.andrew",
+  "action_type": "file.read",
+  "target": "mock:/workspace/README.md",
+  "intent": "Inspect a local repository file for context.",
+  "evidence": ["Read-only inspection is needed before a scoped change."],
+  "environment": "local_mock",
+  "reversibility": "none",
+  "side_effect_scope": "local_read",
+  "blast_radius": "workspace",
+  "sensitive_surface": "none",
+  "timestamp": "2026-06-03T00:00:00Z"
+}

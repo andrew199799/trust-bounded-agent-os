@@ -1,0 +1,65 @@
+version: "0.1"
+status: "human-readable mirror only"
+boundary:
+  - local-only
+  - mock-only
+  - non-executing
+  - no real credentials
+  - no real funds
+  - no real external side effects
+
+risk_tiers:
+  L0: pure thought, analysis, draft, simulation
+  L1: read-only inspection, tests, scans
+  L2: low-risk writes, temporary files, draft files
+  L3: configuration changes, dependency install, code commit, durable memory write
+  L4: deletion, payment, trade, external message send, production modification, credential access
+
+default_decisions:
+  L0: ALLOW
+  L1: ALLOW_LOG
+  L2: ALLOW_LOG_ROLLBACK_NOTE
+  L3: REQUIRE_APPROVAL unless allowlisted or approved
+  L4: DENY_BY_DEFAULT unless a strong approval ticket exists
+
+classification_rules:
+  side_effect_scope:
+    thought_only: L0
+    local_read: L1
+    local_write_with_reversible_or_rollback_possible: L2
+    external_write: L4
+    production_mutation: L4
+  action_type_minimums:
+    L3:
+      - dependency.install
+      - config.modify
+      - code.commit
+      - memory.durable_write
+    L4:
+      - file.delete
+      - payment.send
+      - trade.place
+      - email.send
+      - credential.access
+      - production.modify
+  sensitive_surface_minimums:
+    credentials: L4
+    financial: L4
+    production: L4
+    pii: L3
+    legal: L3
+    health: L3
+  blast_radius_minimums:
+    public: L3
+    third_party: L4
+
+approval_rules:
+  agent_self_approval: invalid
+  L3: normal or strong approval may satisfy the policy gate
+  L4: strong approval is required
+  expired_ticket: invalid
+  action_hash_mismatch: invalid
+
+execution_boundary:
+  executed: always false
+  mock_executed: may be true only for simulated decision paths

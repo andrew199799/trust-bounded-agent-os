@@ -1,0 +1,15 @@
+{
+  "action_id": "act_l3_commit_code",
+  "agent_id": "agent.local.mock",
+  "requested_by": "human.andrew",
+  "action_type": "code.commit",
+  "target": "mock:/git/commit/action-policy-kernel",
+  "intent": "Create a durable code commit after review.",
+  "evidence": ["A commit changes repository history and must be authorized."],
+  "environment": "local_mock",
+  "reversibility": "rollback_possible",
+  "side_effect_scope": "local_write",
+  "blast_radius": "team",
+  "sensitive_surface": "none",
+  "timestamp": "2026-06-03T00:00:00Z"
+}
