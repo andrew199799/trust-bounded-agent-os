@@ -96,5 +96,6 @@ def test_l4_email_send_can_pass_only_with_strong_approval_ticket():
 def test_malformed_action_returns_deny():
     action = replace(load_example("l0_analysis.json"), action_id="")
     decision = decide_policy(action)
+    assert decision.risk_tier == "L4"
     assert decision.decision == "DENY"
     assert decision.executed is False

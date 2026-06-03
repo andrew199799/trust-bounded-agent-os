@@ -25,7 +25,7 @@ def decide_policy(
         action_id = getattr(action_request, "action_id", "unknown")
         return PolicyDecision(
             action_id=action_id,
-            risk_tier="unknown",
+            risk_tier="L4",
             decision="DENY",
             reason=f"malformed or unsafe action request: {exc}",
             required_controls=["deny", "mock_only"],

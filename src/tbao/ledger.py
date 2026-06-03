@@ -7,6 +7,13 @@ from datetime import datetime, timezone
 from .models import ActionLedgerRecord, ActionRequest, ApprovalTicket, PolicyDecision
 
 
+MOCK_EXECUTED_DECISIONS = {
+    "ALLOW",
+    "ALLOW_LOG",
+    "ALLOW_LOG_ROLLBACK_NOTE",
+}
+
+
 class ActionLedger:
     """Append-only in-memory ledger for policy decisions, not real executions."""
 
@@ -22,8 +29,11 @@ class ActionLedger:
         action_request: ActionRequest,
         policy_decision: PolicyDecision,
         approval_ticket: ApprovalTicket | None = None,
-        mock_executed: bool = True,
+        mock_executed: bool | None = None,
     ) -> ActionLedgerRecord:
+        if mock_executed is None:
+            mock_executed = policy_decision.decision in MOCK_EXECUTED_DECISIONS
+
         record = ActionLedgerRecord(
             action_id=action_request.action_id,
             agent_id=action_request.agent_id,

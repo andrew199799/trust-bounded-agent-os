@@ -27,12 +27,23 @@ def test_ledger_record_is_appended_for_policy_decision():
     assert record.decision == decision.decision
 
 
-def test_ledger_record_always_has_executed_false():
+def test_ledger_deny_by_default_has_no_mock_execution_by_default():
     action = load_example("l4_delete_file.json")
     decision = decide_policy(action)
     ledger = ActionLedger()
 
-    record = ledger.append(action, decision, mock_executed=True)
+    record = ledger.append(action, decision)
+
+    assert record.executed is False
+    assert record.mock_executed is False
+
+
+def test_ledger_allow_log_has_mock_execution_by_default():
+    action = load_example("l1_read_file.json")
+    decision = decide_policy(action)
+    ledger = ActionLedger()
+
+    record = ledger.append(action, decision)
 
     assert record.executed is False
     assert record.mock_executed is True
