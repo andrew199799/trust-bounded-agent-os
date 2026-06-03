@@ -75,7 +75,7 @@ Governance over side-effectful actions, including structured requests, risk clas
 The minimal governance path that prevents an agent from jumping directly from intent to execution.
 
 ```text
-ActionRequest -> RiskClassifier -> PolicyDecision -> ExecutionGuard -> ActionLedger
+ActionRequest -> RiskClassifier -> PolicyDecision -> ApprovalTicket -> ActionLedger
 ```
 
 **中文**
@@ -83,8 +83,20 @@ ActionRequest -> RiskClassifier -> PolicyDecision -> ExecutionGuard -> ActionLed
 阻止 Agent 从意图直接跳到执行的最小治理路径。
 
 ```text
-行动请求 -> 风险分级 -> 策略裁决 -> 执行守卫 -> 行动账本
+行动请求 -> 风险分级 -> 策略裁决 -> 审批凭证 -> 行动账本
 ```
+
+---
+
+## Action Policy Kernel / 行动策略内核
+
+**English**
+
+A local-only, mock-only policy kernel that classifies proposed agent actions, decides whether they are allowed, denied, or approval-gated, validates approval tickets, and appends ledger records without executing real actions.
+
+**中文**
+
+一个仅本地、仅模拟的策略内核，用于对 Agent 提议的行动进行分级，裁决其允许、拒绝或需要审批，校验审批凭证，并在不执行真实行动的情况下追加账本记录。
 
 ---
 
@@ -152,6 +164,18 @@ A structured decision that determines whether an action is allowed, denied, requ
 
 ---
 
+## ApprovalTicket / 审批凭证
+
+**English**
+
+A structured approval object bound to a specific ActionRequest by `action_hash`. It must be issued by a human different from the requesting agent. L4 requires strong approval.
+
+**中文**
+
+通过 `action_hash` 绑定到特定 ActionRequest 的结构化审批对象。它必须由不同于请求 Agent 的人类签发。L4 需要强审批。
+
+---
+
 ## ExecutionGuard / 执行守卫
 
 **English**
@@ -168,11 +192,23 @@ A guard layer that checks whether policy requirements are satisfied before execu
 
 **English**
 
-A record of requested, decided, approved, executed, blocked, observed, and recovered actions.
+A record of requested, decided, approved, blocked, observed, and recovered actions. In v0.1, it records policy decisions and simulated decision paths; it does not record real execution results.
 
 **中文**
 
-记录行动的请求、裁决、审批、执行、阻断、观察和恢复过程的账本。
+记录行动的请求、裁决、审批、阻断、观察和恢复过程的账本。在 v0.1 中，它记录策略裁决和模拟决策路径；它不记录真实执行结果。
+
+---
+
+## Mock Execution / 模拟执行
+
+**English**
+
+A simulated decision path used for testability. It never means real-world execution. `executed` must remain false.
+
+**中文**
+
+用于可测试性的模拟决策路径。它绝不表示真实世界执行。`executed` 必须保持 false。
 
 ---
 
